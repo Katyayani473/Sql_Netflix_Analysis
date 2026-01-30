@@ -91,7 +91,8 @@ select show_id,type,title,release_year from netflix_analysis where release_year=
  
 ### 4.Top 5 countries with most content.
 ```sql
-select country,count(*) tcount from netflix_analysis group by country order by count(*) desc limit 5
+select country,count(*) tcount from netflix_analysis
+ group by country order by count(*) desc limit 5
 ```
  
 ### 5.Identify the longest movie 
@@ -129,7 +130,8 @@ select count(*) as totalmovies from netflix_analysis
 
 ### 10.year  with total content added
 ```sql
-select  release_year,count(*) as tcount from  netflix_analysis group by release_year order by tcount desc
+select  release_year,count(*) as tcount from  netflix_analysis
+group by release_year order by tcount desc
 ``` 
 
 ### 11.List movies that are documentaries.
@@ -149,7 +151,8 @@ select count(*) as total_movies from netflix_analysis where type='Movie' and cas
 
 ### 14.country with most content added
 ```sql
-select country,count(*) tcount from netflix_analysis group by country order by count(*) desc limit 1
+select country,count(*) tcount from netflix_analysis
+ group by country order by count(*) desc limit 1
  ```
 
 ### 15.Categorize descriptions as 'Bad' if they contain kill or violence, else 'Good'; count each category.
